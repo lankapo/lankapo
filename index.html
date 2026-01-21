@@ -3,34 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lankapo | Personal Site</title>
+    <title>Lankapo | Digital Space</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
-        body { font-family: sans-serif; line-height: 1.6; max-width: 800px; margin: auto; padding: 20px; background-color: #f4f4f4; }
-        header { background: #333; color: #fff; padding: 1rem; text-align: center; }
-        .content { background: #fff; padding: 20px; margin-top: 20px; border-radius: 8px; }
-        h2 { color: #333; }
-        .links a { display: inline-block; margin-right: 15px; text-decoration: none; color: blue; }
+        :root {
+            --primary: #2563eb;
+            --dark: #1e293b;
+            --light: #f8fafc;
+            --text: #334155;
+        }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            line-height: 1.6; 
+            background-color: var(--light); 
+            color: var(--text);
+            margin: 0;
+            padding: 0;
+        }
+        header { 
+            background: var(--dark); 
+            color: white; 
+            padding: 4rem 2rem; 
+            text-align: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .container { max-width: 900px; margin: -50px auto 50px; padding: 0 20px; }
+        .card { 
+            background: white; 
+            padding: 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+        }
+        h2 { color: var(--dark); border-bottom: 2px solid var(--primary); display: inline-block; margin-bottom: 20px; }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+        .project-item { 
+            padding: 15px; 
+            border: 1px solid #e2e8f0; 
+            border-radius: 8px;
+            transition: transform 0.2s;
+        }
+        .project-item:hover { transform: translateY(-5px); border-color: var(--primary); }
+        .links a { 
+            display: inline-block; 
+            background: var(--primary); 
+            color: white; 
+            padding: 10px 20px; 
+            border-radius: 5px; 
+            text-decoration: none; 
+            font-weight: bold;
+            margin-top: 10px;
+        }
+        .badge { background: #dbeafe; color: #1e40af; padding: 4px 12px; border-radius: 20px; font-size: 0.8rem; font-weight: bold; }
     </style>
 </head>
 <body>
-    <header>
-        <h1>Selamat Datang ke Laman Lankapo</h1>
-    </header>
-    <div class="content">
-        <h2>Tentang Saya</h2>
-        <p>Saya seorang homemaker yang menetap di Manhattan, New York. Minat mendalam dalam bidang teknologi, Linux, dan penghasilan video.</p>
-        
-        <h2>Projek & Minat</h2>
-        <ul>
-            <li><strong>YouTube:</strong> @PanduanTemuduga - Tips kerjaya dan vlogs.</li>
-            <li><strong>Soccer:</strong> Peminat tegar Real Madrid FC dan pemain tegar Fantasy Premier League.</li>
-            <li><strong>Lifestyle:</strong> Aktif di gym dan suka berlari sekitar NYC.</li>
-        </ul>
 
-        <div class="links">
-            <a href="https://github.com/lankapo">GitHub</a>
-            <a href="https://youtube.com/@PanduanTemuduga">YouTube</a>
+<header>
+    <h1>Lankapo</h1>
+    <p>Tech Enthusiast | Content Creator | NYC Resident</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <h2>Tentang Saya</h2>
+        <p>Seorang homemaker di Manhattan yang meminati dunia Linux, AI, dan fotografi. Aktif dalam komuniti teknologi dan suka berkongsi ilmu melalui video.</p>
+    </div>
+
+    <div class="grid">
+        <div class="card">
+            <span class="badge">YouTube</span>
+            <h3>@PanduanTemuduga</h3>
+            <p>Tips kerjaya dan vlog harian di New York City.</p>
+            <div class="links"><a href="https://youtube.com/@PanduanTemuduga">Tonton Video</a></div>
+        </div>
+
+        <div class="card">
+            <span class="badge">Minat</span>
+            <h3>Soccer & FPL</h3>
+            <p>Penyokong tegar Real Madrid FC dan peminat English Premier League.</p>
+        </div>
+        
+        <div class="card">
+            <span class="badge">Lifestyle</span>
+            <h3>Fitness</h3>
+            <p>Workout di gym dan berlari 3 kali seminggu untuk kekal cergas.</p>
         </div>
     </div>
+
+    <div class="card" style="text-align: center;">
+        <h2>Hubungi Saya</h2>
+        <div class="links">
+            <a href="https://github.com/lankapo">GitHub</a>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
